@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+    --color-dark: #0F0F0F;
+    --color-dark-gray: #1F1F1F;
+    --color-medium-gray: #424242;
+    --color-light-gray: #E0E0E0;
+    --color-accent: #FF7800;
+    --color-accent-hover: #FF9233;
+
+  }
+
+/* Contenedor del scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+  }
+  
+  /* Track (fondo del scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #000000 ; /* Color del fondo */
+  }
+  
+  /* Thumb (la parte que se desliza) */
+  ::-webkit-scrollbar-thumb {
+    background: #ff7800; /* Color del thumb */
+    border-radius: 6px; /* Bordes redondeados */
+  }
+  
+  /* Thumb cuando se pasa el cursor encima */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF9233; /* Color del thumb al pasar el mouse */
+  }
+  
