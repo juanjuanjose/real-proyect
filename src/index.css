@@ -7,8 +7,34 @@
     --color-light-gray: #E0E0E0;
     --color-accent: #FF7800;
     --color-accent-hover: #FF9233;
-
   }
+  
+@font-face {
+  font-family: 'NJNaruto'; 
+  src: url('./assets/fonts/njnaruto.woff') format('truetype'); 
+  font-weight: 600; 
+  font-style: italic;
+}
+
+h2{
+
+  font-family: 'NJNaruto', serif;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+button {
+    cursor: pointer;
+  }
+
 
 /* Contenedor del scrollbar */
 ::-webkit-scrollbar {
