@@ -8,7 +8,7 @@ const CharacterCard = ({ name, image }) => {
   };
 
   return (
-    <div className="bg-[#1a1a1a] p-10 rounded-lg shadow-lg flex justify-center items-center flex-col border border-[#ffca28]">
+    <div className=" my-10 bg-[#1a1a1a] p-10 rounded-lg shadow-lg flex justify-center items-center flex-col border border-[#ffca28]">
       <img
         src={image}
         alt={name}
@@ -18,7 +18,7 @@ const CharacterCard = ({ name, image }) => {
       <button
         onClick={handleFavoriteClick}
         className={`mt-4 px-4 py-2 rounded-lg text-white ${
-          isFavorite ? "bg-red-500" : "bg-gray-500"
+          isFavorite ? "bg-red-800" : "bg-gray-800"
         }`}
       >
         {isFavorite ? "Favorito <3" : "Añadir a Favoritos"}
