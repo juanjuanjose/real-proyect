@@ -3,8 +3,9 @@ import CharacterCard from "../CharacterCard/CharacterCard";
 
 const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
+  console.log(characters);
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState(""); 
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -24,7 +25,6 @@ const CharacterList = () => {
     fetchCharacters();
   }, []);
 
- 
   const filteredCharacters = characters.filter((character) =>
     character.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -50,7 +50,7 @@ const CharacterList = () => {
             <CharacterCard
               key={character.id}
               name={character.name}
-              image={character.image}
+              image={character.images[0]}
             />
           ))
         ) : (

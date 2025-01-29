@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const CharacterCard = ({ name, image }) => {
+  console.log("hola mundo", image);
   const [isFavorite, setIsFavorite] = useState(false);
 
-  // Verifica si el personaje ya está en favoritos al cargar
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setIsFavorite(storedFavorites.includes(name));
@@ -41,6 +42,10 @@ const CharacterCard = ({ name, image }) => {
       </button>
     </div>
   );
+};
+CharacterCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default CharacterCard;
