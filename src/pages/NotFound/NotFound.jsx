@@ -3,32 +3,18 @@ import { Link } from "react-router-dom";
 const NotFound = () => {
   return (
     <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#0F0F0F] text-white p-8">
-      {/* Left Column - GIF */}
       <div className="w-full md:w-1/2 flex items-center justify-center relative">
         <div className="relative max-w-md">
-          {/* Contenedor del GIF con efecto de borde ninja */}
           <div className="rounded-lg overflow-hidden border-4 border-[#FF7800] transform hover:scale-105 transition-transform duration-300 shadow-2xl">
             <img
-              src="../../../public/Naruto/crying.gif" // Asegúrate de que la ruta sea correcta
+              src="../../../public/Naruto/crying.gif"
               alt="Naruto triste"
               className="w-full h-auto"
             />
           </div>
-          {/* Efecto de kunai (shuriken) decorativo */}
-          <div className="absolute -top-8 -left-8 text-[#FF7800] text-6xl opacity-50 transform rotate-45">
-            ✦
-          </div>
-          <div className="absolute -bottom-8 -right-8 text-[#FF7800] text-6xl opacity-50 transform -rotate-45">
-            ✦
-          </div>
-          {/* Texto 404 con efecto ninja */}
-          <div className="absolute -bottom-6 -right-6 text-[#FF7800] text-8xl font-black opacity-20 transform rotate-12">
-            404
-          </div>
         </div>
       </div>
 
-      {/* Right Column - Content */}
       <div className="w-full md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
         <div className="max-w-md space-y-6 text-center md:text-left">
           <h2 className="text-[#FF7800] text-xl font-bold tracking-widest">

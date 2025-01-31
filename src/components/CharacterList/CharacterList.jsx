@@ -43,7 +43,6 @@ const CharacterList = () => {
         className="w-full p-2 mb-4 border rounded-lg"
       />
 
-      {/* Lista de personajes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filteredCharacters.length > 0 ? (
           filteredCharacters.map((character) => (
