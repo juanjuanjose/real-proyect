@@ -1,41 +1,61 @@
+import { useEffect, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import LogoNaruto from "../../../public/naruto/naruto.png";
-import Separator from "../../../src/components/Separator/Separator";
-import CharacterList from "../../../src/components/CharacterList/CharacterList";
+import Separator from "../../components/Separator/Separator";
+import CharacterList from "../../components/CharacterList/CharacterList";
 
 function Home() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
-    <div className="text-gray-100">
-      <section className="mx-auto px-5 py-40 text-center flex flex-col items-center gap-10 bg-[url(../public/wallpaper/konohawallpaper.jpeg)] bg-cover bg-center bg-no-repeat relative">
-        <div className="absolute inset-0 bg-black/50"></div>
-        <img
-          src={LogoNaruto}
-          className="h-[150px] w-[200px] md:h-[200px] md:w-[300px] object-contain relative z-10 xl:h-[300px] xl:w-[400px]"
-        ></img>
-        <h2 className="text-2xl md:text-4xl font-bold text-[#ffca28] z-1000"></h2>
-        <svg
-          className="text-white text-[104px] transition-[--transition] m-8 animate-bounce  text-center "
-          width="1em"
-          height="1em"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fillRule="evenodd"
-            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"
+    <main className="min-h-screen text-gray-100">
+      <section className="relative min-h-[80vh] flex flex-col items-center justify-center gap-10 py-20 px-5">
+        <div 
+          className="absolute inset-0 bg-[url(../public/wallpaper/konohawallpaper.jpeg)] bg-cover bg-center bg-no-repeat"
+          aria-hidden="true"
+        />
+        <div 
+          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          aria-hidden="true"
+        />
+        
+        <div className={`relative z-10 transition-all duration-700 ${
+          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          <img
+            src={LogoNaruto}
+            alt="Logo de Naruto"
+            className="w-[200px] h-[150px] md:w-[300px] md:h-[200px] xl:w-[400px] xl:h-[300px] object-contain"
+            loading="eager"
           />
-        </svg>
+        </div>
+
+        <ChevronDown 
+          className="relative z-10 w-16 h-16 text-white animate-bounce mt-5"
+          aria-hidden="true"
+        />
       </section>
 
-      <section className=" mx-auto px-4 py-20 text-center flex flex-col items-center gap-10 bg-gradient-to-r from-[#0F0F0F] to-[#1F1F1F] text-white">
+      <section className="px-4 py-20 bg-gradient-to-r from-neutral-950 to-neutral-900">
         <div className="container mx-auto">
           <Separator />
-          <h2 className="my-20 text-2xl  md:text-4xl font-bold text-[#ffca28]">
-            Personajes
+          
+          <h2 className="my-20 text-2xl md:text-4xl font-bold text-amber-400 relative">
+            <span className="relative z-10">Personajes</span>
+            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-8 bg-amber-500/30 blur-xl" />
           </h2>
-          <CharacterList />
+
+          <div className="w-full">
+            <CharacterList />
+          </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
-export default Home;
+
+export default Home
