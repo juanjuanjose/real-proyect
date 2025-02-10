@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#0F0F0F] text-white p-8">
-      <div className="w-full md:w-1/2 flex items-center justify-center relative">
+    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#0F0F0F] text-white p-8 md:h-[838px]">
+      <div className="w-full md:w-1/2 flex items-center justify-center relative md:h-[838px] ">
         <div className="relative max-w-md">
           <div className="rounded-lg overflow-hidden border-4 border-[#FF7800] transform hover:scale-105 transition-transform duration-300 shadow-2xl">
             <img

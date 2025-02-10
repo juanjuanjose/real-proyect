@@ -4,19 +4,17 @@ import { useState } from "react";
 
 const Header = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [isHovered, setIsHovered] = useState(false); // Estado para controlar el hover
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <header className="sticky top-0 inset-x-0 bg-gradient-to-r from-[#0F0F0F] to-[#1F1F1F] opacity-90 backdrop-blur-md z-[1000] shadow-sm py-4">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center w-full px-4 md:px-8">
-
         <Link
           to="/"
           className="relative h-14 w-14"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-
           <img
             className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${
               isHovered ? "opacity-0 scale-110" : "opacity-100 scale-100"
