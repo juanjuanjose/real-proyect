@@ -2,8 +2,8 @@ import { Github } from "lucide-react";
 
 const Login = () => {
   return (
-    <div className="text-gray-100 h-[100vh]">
-      <section className="h-screen flex items-center justify-center min-h-screen bg-[url(../public/wallpaper/narutofight.gif)] bg-cover bg-center bg-no-repeat relative ">
+    <div className="text-gray-100 ">
+      <section className="h- flex items-center justify-center  bg-[url(../public/wallpaper/narutofight.gif)] bg-cover bg-center bg-no-repeat relative md:h-[838px]">
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="w-full max-w-md p-8 bg-black/50 backdrop-blur-sm rounded-2xl shadow-2xl">
           <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
